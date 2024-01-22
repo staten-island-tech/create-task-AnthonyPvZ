@@ -10,7 +10,7 @@ function Insert(blah) {
       <h2 class="card-title">${result.Name}</h2>
       <img src="${result.image}" alt="" class="card-img">
       <p class="card-desc">${result.Worth}</p>
-      <button type="button" class="buy">Click to add ${result.Name} to cart</button>
+      <button type="button" class=buy>Click to add ${result.Name} to cart</button>
       </div>`;
       container.innerHTML += description;
     })
@@ -28,5 +28,19 @@ function Insert(blah) {
     let search = btn.textContent
     let newarr = Store.filter((option) => { return option.type = search })
     if (search = "Reset"){Insert(cards)}
-    else {Insert(newarr)}
+    else {Purchase(newarr)}
   })
+
+  function Purchase(blah) {
+    blah.map((result) => {
+      const card = document.createElement('div');
+      card.classlist = 'card';
+      const description = 
+      `<div class="card"> 
+      <h2 class="card-title">${result.Name}</h2>
+      <img src="${result.image}" alt="" class="card-img">
+      <p class="card-desc">${result.Worth}</p>
+      </div>`;
+      checkout.innerHTML += description;
+    })
+  }
