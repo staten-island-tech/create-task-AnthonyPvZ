@@ -10,10 +10,17 @@ function Insert(blah) {
       <h2 class="card-title">${result.Name}</h2>
       <img src="${result.image}" alt="" class="card-img">
       <p class="card-desc">${result.Worth}</p>
-      <button type="button" class=buy>${result.Name}</button>
+      <button type="button" class="buy">${result.Name}</button>
       </div>`;
       container.innerHTML += description;
-    })
+    })    
+    document.querySelectorAll(".buy").forEach((buy)=>{
+        buy.addEventListener("click", function(add){
+          console.log("yes");
+          add.target.parentElement.remove();
+          checkout.innerHTML += add.target.parentElement
+        })
+      })
   }
 
 let filters = document.querySelectorAll(".button")
@@ -25,32 +32,13 @@ let filters = document.querySelectorAll(".button")
     else {Insert(newarr)}
   }))
 
-let buying = document.querySelectorAll(".buy")
-  buying.forEach((btn) => btn.addEventListener("click", function() {
-    console.log("pressed")
-    let search = btn.textContent
-    let product = Store.map((option) => { return option.Name === search })
-    if (search === "Reset"){Insert(cards)}
-    else {Insert(product)}
-  }))
 
 function Purchase(blah) {
-    blah.map((result) => {
-      const card = document.createElement('div');
-      card.classlist = 'card';
-      const description = 
-      `<div class="card"> 
-      <h2 class="card-title">${result.Name}</h2>
-      <img src="${result.image}" alt="" class="card-img">
-      <p class="card-desc">${result.Worth}</p>
-      </div>`;
-      checkout.innerHTML += description;
-    })
-  }
+      blah.checkout.innerHTML += target.parentELement;
+    }
 
-function Checkout(cart){
+function finish(cart){
     cart.map((result)=>{
-
     })
   }
   // to do - fix add functionality -- try removeparent element
