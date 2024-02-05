@@ -1,1 +1,161 @@
+.body {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(50, 127, 204);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 62.5%;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+  }
+  
+  :root {
+    --black: rgb(9, 10, 15);
+    --bordercolor: rgb(255, 0, 0);
+    --backgroundcolor: rgba(34, 34, 34, 0.7);
+    --ghostywhite: rgb(194, 194, 194);
+    --buttoncolors: #00bfff;
+    --textcolor: whitesmoke;
+  }
+  
+  .card {
+    font-size: 30px;
+    display: flex;
+    border: 1px solid var(--bordercolor);
+    width: 40vh;
+    height: 35vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 25px 25px 25px 25px;
+    background-color: var(--backgroundcolor);
+    box-shadow: inset 0px 10px 25px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .card-img {
+    width: 75%;
+    height: 35%;
+    margin: 5px 5px 5px 5px;
+    justify-content: center;
+  }
+  
+  .card-title {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    color: var(--textcolor);
+  }
+  .buy{
+    text-align: center;
+    width: 80%;
+    height: 10%;
+    border: 1px solid var(--bordercolor);
+    background-color: var(--buttoncolors);
+    color: var(--textcolor);
+    font-size: 25px;
+  }
+  .card-desc {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    color: var(--textcolor);
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    width: 50%;
+    font-size: 65px;
+    color: rgb(194, 194, 194);
+    background-color: rgba(34, 34, 34, 0.7);
+    margin-top: 40px;
+    margin-left: 600px;
+    margin-right: 600px;
+    margin-bottom: 20px;
+    border: 1px solid var(--bordercolor);
+  }
+  
+  .storage {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(34, 34, 34, 0.7);
+    margin-left: 60px;
+    margin-right: 60px;
+  }
 
+  #cart{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .card {
+      width: 45%;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .card {
+      width: 100%;
+    }
+  }
+  
+  #Reset {
+    background-color: var(--buttoncolors);
+  }
+  
+  #Guns {
+    background-color: var(--buttoncolors);
+  }
+  
+  #Melee {
+    background-color: var(--buttoncolors);
+  }
+  
+  #Contraband {
+    background-color: var(--backgroundcolor);
+    color: var(--textcolor);
+  }
+  
+.buttons {
+    text-align: center;
+    width: 30%;
+    height: 10%;
+    margin-left: 600px;
+    margin-right: 600px;
+    border: 1px solid var(--bordercolor);
+    background-color: var(--backgroundcolor);
+    color: var(--textcolor);
+    font-size: 25px;
+    line-height: 0px;
+  }
+
+#Money {
+    font-size: 18px;
+    text-align: center;
+    width: 50%;
+    font-size: 65px;
+    color: rgb(194, 194, 194);
+    background-color: rgba(34, 34, 34, 0.7);
+    margin-top: 40px;
+    margin-left: 600px;
+    margin-right: 600px;
+    margin-bottom: 20px;
+    border: 1px solid var(--bordercolor);
+}
