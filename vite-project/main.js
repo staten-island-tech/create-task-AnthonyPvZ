@@ -42,13 +42,15 @@ filters.forEach((btn) => btn.addEventListener("click", function () {
   let filter = btn.textContent
   container.innerHTML = ""
   let newarr = Store.filter((option) => { return option.type === filter })
-  if (filter === "Reset"){Insert(Store)}
-  else {Insert(newarr)
-}}))
+  if (filter === "Reset") { Insert(Store) }
+  else {
+    Insert(newarr)
+  }
+}))
 
 let buying = document.querySelectorAll("#Checkout")
 buying.forEach((check) => check.addEventListener("click", function () {
-  if (document.querySelector(".moneyvalue").innerHTML >= 0) {window.alert("Successfully bought!")}
-  else {window.alert("Purchase denied, overbudget!")};
+  if (document.querySelector(".moneyvalue").innerHTML >= 0) { window.alert("Successfully bought!") }
+  else { window.alert("Purchase denied, overbudget!") };
   cart.innerHTML = "";
 }))
