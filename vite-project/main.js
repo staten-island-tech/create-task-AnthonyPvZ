@@ -47,7 +47,6 @@ filters.forEach((btn) => btn.addEventListener("click", function () {
     Insert(newarr)
   }
 }))
-
 let buying = document.querySelectorAll("#Checkout")
 buying.forEach((check) => check.addEventListener("click", function () {
   if (document.querySelector(".moneyvalue").innerHTML >= 0) { window.alert("Successfully bought!") }

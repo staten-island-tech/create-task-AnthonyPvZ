@@ -59,8 +59,8 @@
     width: 80%;
     height: 10%;
     border: 1px solid var(--bordercolor);
-    background-color: var(--buttoncolors);
-    color: var(--textcolor);
+    background-color: greenyellow;
+    color: black;
     font-size: 25px;
   }
   .card-desc {
