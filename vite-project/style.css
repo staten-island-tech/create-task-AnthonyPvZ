@@ -29,7 +29,7 @@
     display: flex;
     border: 1px solid var(--bordercolor);
     width: 40vh;
-    height: 35vh;
+    height: 40vh;
     justify-content: center;
     flex-wrap: wrap;
     margin: 25px 25px 25px 25px;
@@ -117,7 +117,7 @@
   }
   
   #Reset {
-    background-color: var(--buttoncolors);
+    background-color: red;
   }
   
   #Guns {
@@ -132,7 +132,15 @@
     background-color: var(--backgroundcolor);
     color: var(--textcolor);
   }
-  
+  #Checkout{
+    background-color: greenyellow;
+  }
+  #Perks{
+    background-color: pink;
+  }
+  #Other{
+    background-color: blanchedalmond;
+  }
 .buttons {
     text-align: center;
     width: 30%;
@@ -158,4 +166,12 @@
     margin-right: 600px;
     margin-bottom: 20px;
     border: 1px solid var(--bordercolor);
+}
+.money-title{
+    font-size: 40px;
+    margin: 0px 0px 0px 0px
+}
+.moneyvalue{
+    font-size: 40px;
+    margin: 0px 0px 0px 0px
 }

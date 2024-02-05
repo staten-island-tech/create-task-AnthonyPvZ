@@ -9,7 +9,7 @@ function Insert(blah) {
       `<div class="card"> 
       <h2 class="card-title">${result.Name}</h2>
       <img src="${result.image}" alt="" class="card-img">
-      <p class="card-desc">Worth: Click to buy for ${result.Worth}</p>
+      <p class="card-desc">Worth: Click to buy for $${result.Worth}</p>
       <button type="button" class="buy">${result.Name}</button>
       </div>`;
     container.innerHTML += description;
@@ -30,7 +30,7 @@ function Create(blah) {
       `<div class="card"> 
       <h2 class="card-title">${result.Name}</h2>
       <img src="${result.image}" alt="" class="card-img">
-      <p class="card-desc">${result.Worth}</p>
+      <p class="card-desc">This is worth $${result.Worth}</p>
       </div>`;
     cart.innerHTML += description;
     let currentvalue = (document.querySelector(".moneyvalue").innerHTML - result.Worth)
@@ -42,11 +42,13 @@ filters.forEach((btn) => btn.addEventListener("click", function () {
   let filter = btn.textContent
   container.innerHTML = ""
   let newarr = Store.filter((option) => { return option.type === filter })
-  Insert(newarr)
-}))
+  if (filter === "Reset"){Insert(Store)}
+  else {Insert(newarr)
+}}))
 
-let buying = document.querySelectorAll(".checkout")
+let buying = document.querySelectorAll("#Checkout")
 buying.forEach((check) => check.addEventListener("click", function () {
-  if (Money.innerHTML > 0) { console.log("positive") }
-  else { console.log("negative") }
+  if (document.querySelector(".moneyvalue").innerHTML >= 0) {window.alert("Successfully bought!")}
+  else {window.alert("Purchase denied, overbudget!")};
+  cart.innerHTML = "";
 }))
