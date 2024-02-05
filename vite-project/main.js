@@ -52,5 +52,6 @@ let buying = document.querySelectorAll("#Checkout")
 buying.forEach((check) => check.addEventListener("click", function () {
   if (document.querySelector(".moneyvalue").innerHTML >= 0) { window.alert("Successfully bought!") }
   else { window.alert("Purchase denied, overbudget!") };
-  cart.innerHTML = "";
+  cart.innerHTML = ""
+  document.querySelector(".moneyvalue").innerHTML = "100";
 }))
